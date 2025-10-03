@@ -9,8 +9,7 @@ class TestCLIIntegration:
     """Test CLI application integrating with calculator module"""
     def run_cli(self, *args):
         """Helper method to run CLI and capture output"""
-        cmd = [sys.executable, 'src/cli.py'] +
-        list(args)
+        cmd = [sys.executable, 'src/cli.py'] + list(args)
         result = subprocess.run(cmd,
         capture_output=True, text=True, cwd='.')
         return result
